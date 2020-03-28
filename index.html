@@ -27,6 +27,7 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="current-time" class="lead"></p>
     </header>
     <div class="container">
       <!--<div class="row description">
@@ -41,11 +42,11 @@
       </div>
       <br>-->
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="8">
             <p>9AM</p>
             <p id="hour-nine"></p>
           </div>
-          <div class="col-md-8" class="time-block description">
+          <div class="col-md-8" class="time-block">
             <textarea id="nine"></textarea>
           </div>
           <div class="saveBtn"> 
@@ -53,7 +54,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="9">
             <p>10AM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -64,7 +65,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="10">
             <p>11AM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -75,7 +76,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="11">
             <p>12PM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -86,7 +87,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="12">
             <p>1PM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -97,7 +98,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="13">
             <p>2PM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -108,7 +109,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="14">
             <p>3PM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -119,7 +120,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="15">
             <p>4PM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -130,7 +131,7 @@
           </div>
       </div>
       <div class="row">
-          <div class="hour">
+          <div class="hour" value="16">
             <p>5PM</p>
           </div>
           <div class="col-md-8" class="time-block">
@@ -158,8 +159,32 @@
       console.log(now);
       $("#currentDay").text(now);
 
+      var currentTime = moment().format("h:mmA");
+      console.log(currentTime);
+      $("#current-time").text(currentTime);
+
       var hour = moment().hour();
       console.log(hour);
+
+      var hourGetter = $(".hour");
+      console.log(hourGetter);
+      console.log(parseInt(hourGetter[0].attributes[1].value));
+      console.log(parseInt(hourGetter[1].attributes[1].value));
+      console.log(parseInt(hourGetter[2].attributes[1].value));
+      console.log(parseInt(hourGetter[3].attributes[1].value));
+      console.log(parseInt(hourGetter[4].attributes[1].value));
+      console.log(parseInt(hourGetter[5].attributes[1].value));
+      console.log(parseInt(hourGetter[6].attributes[1].value));
+      console.log(parseInt(hourGetter[7].attributes[1].value));
+      console.log(parseInt(hourGetter[8].attributes[1].value));
+      
+
+
+      /*while (condition) {
+        
+      }*/
+
+      
 
       getStorage();
 
