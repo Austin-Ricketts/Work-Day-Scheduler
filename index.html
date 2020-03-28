@@ -146,56 +146,80 @@
       console.log(now);
       $("#currentDay").text(now);
 
+      getStorage();
+
+      function getStorage() {
+        var nine = JSON.parse(localStorage.getItem("nine"));
+        var ten = JSON.parse(localStorage.getItem("ten"));
+        var eleven = JSON.parse(localStorage.getItem("eleven"));
+        var twelve = JSON.parse(localStorage.getItem("twelve"));
+        var one = JSON.parse(localStorage.getItem("one"));
+        var two = JSON.parse(localStorage.getItem("two"));
+        var three = JSON.parse(localStorage.getItem("three"));
+        var four = JSON.parse(localStorage.getItem("four"));
+        var five = JSON.parse(localStorage.getItem("five"));
+
+        $("#nine").val(nine);
+        $("#ten").val(ten);
+        $("#eleven").val(eleven);
+        $("#twelve").val(twelve);
+        $("#one").val(one);
+        $("#two").val(two);
+        $("#three").val(three);
+        $("#four").val(four);
+        $("#five").val(five);
+      }
+
       $(".data-nine").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var nineInfo = $.trim($("#nine").val());
         localStorage.setItem("nine", JSON.stringify(nineInfo));
         console.log(nineInfo);
       });
       $(".data-ten").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var tenInfo = $.trim($("#ten").val());
         localStorage.setItem("ten", JSON.stringify(tenInfo));
         console.log(tenInfo);
       });
       $(".data-eleven").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var elevenInfo = $.trim($("#eleven").val());
         localStorage.setItem("eleven", JSON.stringify(elevenInfo));
         console.log(elevenInfo);
       });
       $(".data-twelve").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var twelveInfo = $.trim($("#twelve").val());
         localStorage.setItem("twelve", JSON.stringify(twelveInfo));
         console.log(twelveInfo);
       });
       $(".data-one").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var oneInfo = $.trim($("#one").val());
         localStorage.setItem("one", JSON.stringify(oneInfo));
         console.log(oneInfo);
       });
       $(".data-two").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var twoInfo = $.trim($("#two").val());
         localStorage.setItem("two", JSON.stringify(twoInfo));
         console.log(twoInfo);
       });
       $(".data-three").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var threeInfo = $.trim($("#three").val());
         localStorage.setItem("three", JSON.stringify(threeInfo));
         console.log(threeInfo);
       });
       $(".data-four").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var fourInfo = $.trim($("#four").val());
         localStorage.setItem("four", JSON.stringify(fourInfo));
         console.log(fourInfo);
       });
       $(".data-five").on("click", function() {
-        alert("I've been clicked!");
+        event.preventDefault();
         var fiveInfo = $.trim($("#five").val());
         localStorage.setItem("five", JSON.stringify(fiveInfo));
         console.log(fiveInfo);
