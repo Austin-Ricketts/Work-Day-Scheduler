@@ -29,11 +29,23 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+      <!--<div class="row description">
+        <h1>A Brief Description of the Calendar</h1>
+        <p>Type your task in the center column, toward the left. 
+          Press the save button so that if you close your browser, your task will still be there when you return. 
+          The calendar will track the time of the day. 
+          Activities in the past will be greyed out in the center column. 
+          Present activities will be red.
+          Future activities will be green.
+        </p>
+      </div>
+      <br>-->
       <div class="row">
           <div class="hour">
             <p>9AM</p>
+            <p id="hour-nine"></p>
           </div>
-          <div class="col-md-8" class="time-block">
+          <div class="col-md-8" class="time-block description">
             <textarea id="nine"></textarea>
           </div>
           <div class="saveBtn"> 
@@ -145,6 +157,9 @@
       var now = moment().format("MMMM-D-YYYY");
       console.log(now);
       $("#currentDay").text(now);
+
+      var hour = moment().hour();
+      console.log(hour);
 
       getStorage();
 
