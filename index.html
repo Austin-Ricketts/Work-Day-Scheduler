@@ -197,68 +197,145 @@
 
         console.log(now);
         console.log(m4.isAfter(now));
+        console.log(m3.isSame(now, "hour"));
 
-        if (m9.isBefore(now)) {
-          $("#row-nine").css({"background-color": "#747070"});
-        } else if (m9.isSame(now)) {
+        
+
+        /*if (m9.isSame(now, "hour")) {
           $("#row-nine").css({"background-color": "#b6423c"});
-        } else if (m9.isAfter(now)) {
+        }
+        if (m10.isSame(now, "hour")) {
+          $("#row-ten").css({"background-color": "#b6423c"});
+        }
+        if (m11.isSame(now, "hour")) {
+          $("#row-eleven").css({"background-color": "#b6423c"});
+        }
+        if (m12.isSame(now, "hour")) {
+          $("#row-twelve").css({"background-color": "#b6423c"});
+        }
+        if (m1.isSame(now, "hour")) {
+          $("#row-one").css({"background-color": "#b6423c"});
+        }
+        if (m2.isSame(now, "hour")) {
+          $("#row-two").css({"background-color": "#b6423c"});
+        }
+        if (m3.isSame(now, "hour")) {
+          $("#row-three").css({"background-color": "#b6423c"});
+        }
+        if (m4.isSame(now, "hour")) {
+          $("#row-four").css({"background-color": "#b6423c"});
+        }
+        if (m5.isSame(now, "hour")) {
+          $("#row-five").css({"background-color": "#b6423c"});
+        }
+
+        if (m9.isBefore(now, "hour")) {
+          $("#row-nine").css({"background-color": "#747070"});
+        } if (m9.isAfter(now, "hour")) {
           $("#row-nine").css({"background-color": "#5d915d"});
         }
-        if (m10.isBefore(now)) {
+        if (m10.isBefore(now, "hour")) {
           $("#row-ten").css({"background-color": "#747070"});
-        } else if (m10.isSame(now)) {
-          $("#row-ten").css({"background-color": "#b6423c"});
-        } else if (m10.isAfter(now)) {
+        } if (m10.isAfter(now, "hour")) {
           $("#row-ten").css({"background-color": "#5d915d"});
         }
-        if (m11.isBefore(now)) {
+        if (m11.isBefore(now, "hour")) {
           $("#row-eleven").css({"background-color": "#747070"});
-        } else if (m11.isSame(now)) {
-          $("#row-eleven").css({"background-color": "#b6423c"});
-        } else if (m11.isAfter(now)) {
+        } if (m11.isAfter(now, "hour")) {
           $("#row-eleven").css({"background-color": "#5d915d"});
         }
-        if (m12.isBefore(now)) {
+        if (m12.isBefore(now, "hour")) {
           $("#row-twelve").css({"background-color": "#747070"});
-        } else if (m12.isSame(now)) {
-          $("#row-twelve").css({"background-color": "#b6423c"});
-        } else if (m12.isAfter(now)) {
+        } if (m12.isAfter(now, "hour")) {
           $("#row-twelve").css({"background-color": "#5d915d"});
         }
-        if (m1.isBefore(now)) {
+        if (m1.isBefore(now, "hour")) {
           $("#row-one").css({"background-color": "#747070"});
-        } else if (m1.isSame(now)) {
-          $("#row-one").css({"background-color": "#b6423c"});
-        } else if (m1.isAfter(now)) {
+        } if (m1.isAfter(now, "hour")) {
           $("#row-one").css({"background-color": "#5d915d"});
         }
-        if (m2.isBefore(now)) {
+        if (m2.isBefore(now, "hour")) {
           $("#row-two").css({"background-color": "#747070"});
-        } else if (m2.isSame(now)) {
-          $("#row-two").css({"background-color": "#b6423c"});
-        } else if (m2.isAfter(now)) {
+        } if (m2.isAfter(now, "hour")) {
           $("#row-two").css({"background-color": "#5d915d"});
         }
-        if (m3.isBefore(now)) {
+        if (m3.isBefore(now, "hour")) {
           $("#row-three").css({"background-color": "#747070"});
-        } else if (m3.isSame(now)) {
-          $("#row-three").css({"background-color": "#b6423c"});
-        } else if (m3.isAfter(now)) {
+        } if (m3.isAfter(now, "hour")) {
           $("#row-three").css({"background-color": "#5d915d"});
         }
-        if (m4.isBefore(now)) {
+        if (m4.isBefore(now, "hour")) {
           $("#row-four").css({"background-color": "#747070"});
-        } else if (m4.isSame(now)) {
+        } if (m4.isAfter(now, "hour")) {
+          $("#row-four").css({"background-color": "#5d915d"});
+        }
+        if (m5.isBefore(now, "hour")) {
+          $("#row-five").css({"background-color": "#747070"});
+        } if (m5.isAfter(now, "hour")) {
+          $("#row-five").css({"background-color": "#5d915d"});
+        }*/
+
+        if (m9.isBefore(now, "hour")) {
+          $("#row-nine").css({"background-color": "#747070"});
+        } else if (m9.isSame(now, "hour")) {
+          $("#row-nine").css({"background-color": "#b6423c"});
+        } else if (m9.isAfter(now, "hour")) {
+          $("#row-nine").css({"background-color": "#5d915d"});
+        }
+        if (m10.isBefore(now, "hour")) {
+          $("#row-ten").css({"background-color": "#747070"});
+        } else if (m10.isSame(now, "hour")) {
+          $("#row-ten").css({"background-color": "#b6423c"});
+        } else if (m10.isAfter(now, "hour")) {
+          $("#row-ten").css({"background-color": "#5d915d"});
+        }
+        if (m11.isBefore(now, "hour")) {
+          $("#row-eleven").css({"background-color": "#747070"});
+        } else if (m11.isSame(now, "hour")) {
+          $("#row-eleven").css({"background-color": "#b6423c"});
+        } else if (m11.isAfter(now, "hour")) {
+          $("#row-eleven").css({"background-color": "#5d915d"});
+        }
+        if (m12.isBefore(now, "hour")) {
+          $("#row-twelve").css({"background-color": "#747070"});
+        } else if (m12.isSame(now, "hour")) {
+          $("#row-twelve").css({"background-color": "#b6423c"});
+        } else if (m12.isAfter(now, "hour")) {
+          $("#row-twelve").css({"background-color": "#5d915d"});
+        }
+        if (m1.isBefore(now, "hour")) {
+          $("#row-one").css({"background-color": "#747070"});
+        } else if (m1.isSame(now, "hour")) {
+          $("#row-one").css({"background-color": "#b6423c"});
+        } else if (m1.isAfter(now, "hour")) {
+          $("#row-one").css({"background-color": "#5d915d"});
+        }
+        if (m2.isBefore(now, "hour")) {
+          $("#row-two").css({"background-color": "#747070"});
+        } else if (m2.isSame(now, "hour")) {
+          $("#row-two").css({"background-color": "#b6423c"});
+        } else if (m2.isAfter(now, "hour")) {
+          $("#row-two").css({"background-color": "#5d915d"});
+        }
+        if (m3.isBefore(now, "hour")) {
+          $("#row-three").css({"background-color": "#747070"});
+        } else if (m3.isSame(now, "hour")) {
+          $("#row-three").css({"background-color": "#b6423c"});
+        } else if (m3.isAfter(now, "hour")) {
+          $("#row-three").css({"background-color": "#5d915d"});
+        }
+        if (m4.isBefore(now, "hour")) {
+          $("#row-four").css({"background-color": "#747070"});
+        } else if (m4.isSame(now, "hour")) {
           $("#row-four").css({"background-color": "#b6423c"});
         } else if (m4.isAfter(now)) {
           $("#row-four").css({"background-color": "#5d915d"});
         }
-        if (m5.isBefore(now)) {
+        if (m5.isBefore(now, "hour")) {
           $("#row-five").css({"background-color": "#747070"});
-        } else if (m5.isSame(now)) {
+        } else if (m5.isSame(now, "hour")) {
           $("#row-five").css({"background-color": "#b6423c"});
-        } else if (m5.isAfter(now)) {
+        } else if (m5.isAfter(now), "hour") {
           $("#row-five").css({"background-color": "#5d915d"});
         }
 

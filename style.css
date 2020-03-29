@@ -45,21 +45,6 @@ textarea{
   border-right: 1px solid black;
 }
 
-.past {
-  background-color: #747070;
-  color: white;
-}
-
-.present {
-  background-color: #b6423c;
-  color: white;
-}
-
-.future {
-  background-color: #5d915d;
-  color: white;
-}
-
 .saveBtn {
   border-left: 1px solid black;
   border-bottom: 1px solid black;
