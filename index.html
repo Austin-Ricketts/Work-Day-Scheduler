@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--Here is the boilerplate that was given to get the website started.-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,11 +27,12 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!--The #currentDay here has a moment.js feature attached to it and will give the user the current calendar date.-->
       <p id="currentDay" class="lead"></p>
       <p id="current-time" class="lead"></p>
     </header>
     <div class="container">
-      
+      <!--The website is layed out using Bootstrap components. Each row below represents an hour in the user's workday.-->
       <div class="row" id="row-nine">
           <div class="hour" value="8">
             <p>9AM</p>
@@ -137,17 +139,19 @@
     
     
     
-    
+    <!--The below sources are for jquery and moment.js. Jquery was used because it shortens the code and makes it easier to write. Moment.js was used for a similar reason. It is more streamlined and efficient than the Javascript date method.-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
-
+    <!--<script> in order to enter javascript in the html file.-->
     <script type="text/javascript">
+    /*document.ready function prevents the javascript from firing before the html is set in the DOM*/
     $(document).ready(function() {
+      /*The displayDate var captures the current date and displays it in the jumbotron above.*/
       var displayDate = moment().format("MMMM-D-YYYY");
       $("#currentDay").text(displayDate);
-
+      /*The now var captures the precise local time of the user. This var is used as the base time to ping against the other moment elements*/
       var now = moment();
-
+      /*The below m vars each capture a moment equivalent to a standard workday hour. The object syntax that is used turned out to be the most precise and consistent. Many other tries with other moment.js syntax weren't, for me, able to catch the precise time.*/
       var m9 = moment({
         h: 09,
         s: 0
@@ -184,7 +188,7 @@
         h: 17,
         s: 0
         });
-
+        /*The below 'if' statements run through a series of tests on each moment var. They use the isSame isBefore and isAfter methods from moment.js to measure if that moment is past, present, or future. If past, they grey out the row; if present, they red out the row; if future, they green out the row.*/
         if (m9.isBefore(now, "hour")) {
           $("#row-nine").css({"background-color": "#747070"});
         } else if (m9.isSame(now, "hour")) {
@@ -250,10 +254,11 @@
         }
 
       
-
+      /*The following function uses the localStorage.getItem() method to capture user input then employs JSON to stringify it in the user's local storage.*/
       getStorage();
 
       function getStorage() {
+        /*Whatever data has already been stored will be retrieved here.*/
         var nine = JSON.parse(localStorage.getItem("nine"));
         var ten = JSON.parse(localStorage.getItem("ten"));
         var eleven = JSON.parse(localStorage.getItem("eleven"));
@@ -263,7 +268,7 @@
         var three = JSON.parse(localStorage.getItem("three"));
         var four = JSON.parse(localStorage.getItem("four"));
         var five = JSON.parse(localStorage.getItem("five"));
-
+        /*The value of the user input is captured here below.*/
         $("#nine").val(nine);
         $("#ten").val(ten);
         $("#eleven").val(eleven);
@@ -274,7 +279,7 @@
         $("#four").val(four);
         $("#five").val(five);
       }
-
+      /*The below buttons are made via jquery. When the save button is pressed for a specific hour, then that user input is set into local storage.*/
       $(".data-nine").on("click", function() {
         event.preventDefault();
         var nineInfo = $.trim($("#nine").val());
@@ -331,7 +336,11 @@
       });
 
 
-
+     /*I want to be able to get my code shorter. 
+     I have to learn how to work better with loops and to capture the data more precisely. 
+     I did learn a lot through this homework assignment, though. 
+     I have a better handle on what object oriented coding means.
+     Eventually, my code will be less of a kludge.*/
 
 
 
