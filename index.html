@@ -153,6 +153,8 @@
 
     <script type="text/javascript">
 
+      var timeBlock = $(".time-block");
+      console.log(timeBlock);
       var hourGetter = $(".hour");
       console.log(hourGetter);
       var ninehr = parseInt(hourGetter[0].attributes[1].value);
@@ -170,10 +172,54 @@
 
     $(document).ready(function() {
 
+      
     
-      var now = moment().format("MMMM-D-YYYY");
+      var now = moment().format("MMMM-D-YYYY hh:mm");
       console.log(now);
       $("#currentDay").text(now);
+
+      var m9 = moment({
+        h: 9,
+        s: 0
+        });
+      var m10 = moment({
+        h: 10,
+        s: 0
+        });
+      var m11 = moment({
+        h: 11,
+        s: 0
+        });
+      var m12 = moment({
+        h: 12,
+        s: 0
+        });
+      var m1 = moment({
+        h: 13,
+        s: 0
+        });
+      var m2 = moment({
+        h: 14,
+        s: 0
+        });
+      var m3 = moment({
+        h: 15,
+        s: 0
+        });
+      var m4 = moment({
+        h: 16,
+        s: 0
+        });
+      var m5 = moment({
+        h: 17,
+        s: 0
+        });
+
+
+      console.log(m5.isBefore(now));
+
+      var timeSet = moment().format("YYYY-MM-D")
+      console.log(timeSet);
 
       var currentTime = moment().format("h:mmA");
       console.log(currentTime);
@@ -181,6 +227,9 @@
 
       var hour = moment().hour();
       console.log(hour);
+      
+
+      
 
       
 
@@ -188,19 +237,13 @@
         const element = hourLoop[i];
         console.log(element);
         if (element === hour) {
-          $(".time-block").animate({ background: "#b6423c", color: "white"});
+          $(timeBlock).css({"background-color": "#b6423c"});
         } else if (element < hour) {
-          $(".time-block").animate({ background: "#5d915d", color: "white"});
+          $(timeBlock).css({"background-color": "#5d915d"});
         } else if (element > hour) {
-          $(".time-block").animate({ background: "#747070", color: "white"});
+          $(timeBlock).css({"background-color": "#747070"});
         }
       }
-      
-
-
-      /*while (condition) {
-        
-      }*/
 
       
 
