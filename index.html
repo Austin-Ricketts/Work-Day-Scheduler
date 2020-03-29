@@ -41,7 +41,7 @@
         </p>
       </div>
       <br>-->
-      <div class="row">
+      <div class="row" id="row-nine">
           <div class="hour" value="8">
             <p>9AM</p>
             <p id="hour-nine"></p>
@@ -53,7 +53,7 @@
             <button class="saveBtn data-nine"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-ten">
           <div class="hour" value="9">
             <p>10AM</p>
           </div>
@@ -64,7 +64,7 @@
             <button class="saveBtn data-ten"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-eleven">
           <div class="hour" value="10">
             <p>11AM</p>
           </div>
@@ -75,7 +75,7 @@
             <button class="saveBtn data-eleven"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-twelve">
           <div class="hour" value="11">
             <p>12PM</p>
           </div>
@@ -86,7 +86,7 @@
             <button class="saveBtn data-twelve"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-one">
           <div class="hour" value="12">
             <p>1PM</p>
           </div>
@@ -97,7 +97,7 @@
             <button class="saveBtn data-one"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-two">
           <div class="hour" value="13">
             <p>2PM</p>
           </div>
@@ -108,7 +108,7 @@
             <button class="saveBtn data-two"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-threee">
           <div class="hour" value="14">
             <p>3PM</p>
           </div>
@@ -119,7 +119,7 @@
             <button class="saveBtn data-three"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-four">
           <div class="hour" value="15">
             <p>4PM</p>
           </div>
@@ -130,7 +130,7 @@
             <button class="saveBtn data-four"><i>Save</i></button>
           </div>
       </div>
-      <div class="row">
+      <div class="row" id="row-five">
           <div class="hour" value="16">
             <p>5PM</p>
           </div>
@@ -171,11 +171,7 @@
       console.log(hourLoop);
 
     $(document).ready(function() {
-
-      
-    
       var now = moment().format("MMMM-D-YYYY hh:mm");
-      console.log(now);
       $("#currentDay").text(now);
 
       var m9 = moment({
@@ -215,35 +211,69 @@
         s: 0
         });
 
-
-      console.log(m5.isBefore(now));
-
-      var timeSet = moment().format("YYYY-MM-D")
-      console.log(timeSet);
-
-      var currentTime = moment().format("h:mmA");
-      console.log(currentTime);
-      $("#current-time").text(currentTime);
-
-      var hour = moment().hour();
-      console.log(hour);
-      
-
-      
-
-      
-
-      for (let i = 0; i < hourLoop.length; i++) {
-        const element = hourLoop[i];
-        console.log(element);
-        if (element === hour) {
-          $(timeBlock).css({"background-color": "#b6423c"});
-        } else if (element < hour) {
-          $(timeBlock).css({"background-color": "#5d915d"});
-        } else if (element > hour) {
-          $(timeBlock).css({"background-color": "#747070"});
+        if (m9.isBefore(now)) {
+          $("#row-nine").css({"background-color": "#747070"});
+        } else if (m9.isSame(now)) {
+          $("#row-nine").css({"background-color": "#b6423c"});
+        } else if (m9.isAfter(now)) {
+          $("#row-nine").css({"background-color": "#5d915d"});
         }
-      }
+        if (m10.isBefore(now)) {
+          $("#row-ten").css({"background-color": "#747070"});
+        } else if (m10.isSame(now)) {
+          $("#row-ten").css({"background-color": "#b6423c"});
+        } else if (m10.isAfter(now)) {
+          $("#row-ten").css({"background-color": "#5d915d"});
+        }
+        if (m11.isBefore(now)) {
+          $("#row-eleven").css({"background-color": "#747070"});
+        } else if (m11.isSame(now)) {
+          $("#row-eleven").css({"background-color": "#b6423c"});
+        } else if (m11.isAfter(now)) {
+          $("#row-eleven").css({"background-color": "#5d915d"});
+        }
+        if (m12.isBefore(now)) {
+          $("#row-twelve").css({"background-color": "#747070"});
+        } else if (m12.isSame(now)) {
+          $("#row-twelve").css({"background-color": "#b6423c"});
+        } else if (m12.isAfter(now)) {
+          $("#row-twelve").css({"background-color": "#5d915d"});
+        }
+        if (m1.isBefore(now)) {
+          $("#row-one").css({"background-color": "#747070"});
+        } else if (m1.isSame(now)) {
+          $("#row-one").css({"background-color": "#b6423c"});
+        } else if (m1.isAfter(now)) {
+          $("#row-one").css({"background-color": "#5d915d"});
+        }
+        if (m2.isBefore(now)) {
+          $("#row-two").css({"background-color": "#747070"});
+        } else if (m2.isSame(now)) {
+          $("#row-two").css({"background-color": "#b6423c"});
+        } else if (m2.isAfter(now)) {
+          $("#row-two").css({"background-color": "#5d915d"});
+        }
+        if (m3.isBefore(now)) {
+          $("#row-three").css({"background-color": "#747070"});
+        } else if (m3.isSame(now)) {
+          $("#row-three").css({"background-color": "#b6423c"});
+        } else if (m3.isAfter(now)) {
+          $("#row-three").css({"background-color": "#5d915d"});
+        }
+        if (m4.isBefore(now)) {
+          $("#row-four").css({"background-color": "#747070"});
+        } else if (m4.isSame(now)) {
+          $("#row-four").css({"background-color": "#b6423c"});
+        } else if (m4.isAfter(now)) {
+          $("#row-four").css({"background-color": "#5d915d"});
+        }
+        if (m5.isBefore(now)) {
+          $("#row-five").css({"background-color": "#747070"});
+        } else if (m5.isSame(now)) {
+          $("#row-five").css({"background-color": "#b6423c"});
+        } else if (m5.isAfter(now)) {
+          $("#row-five").css({"background-color": "#5d915d"});
+        }
 
       
 
