@@ -108,7 +108,7 @@
             <button class="saveBtn data-two"><i>Save</i></button>
           </div>
       </div>
-      <div class="row" id="row-threee">
+      <div class="row" id="row-three">
           <div class="hour" value="14">
             <p>3PM</p>
           </div>
@@ -152,30 +152,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-
-      var timeBlock = $(".time-block");
-      console.log(timeBlock);
-      var hourGetter = $(".hour");
-      console.log(hourGetter);
-      var ninehr = parseInt(hourGetter[0].attributes[1].value);
-      var tenhr = parseInt(hourGetter[1].attributes[1].value);
-      var elevenhr = parseInt(hourGetter[2].attributes[1].value);
-      var twelvehr = parseInt(hourGetter[3].attributes[1].value);
-      var onehr = parseInt(hourGetter[4].attributes[1].value);
-      var twohr = parseInt(hourGetter[5].attributes[1].value);
-      var threehr = parseInt(hourGetter[6].attributes[1].value);
-      var fourhr = parseInt(hourGetter[7].attributes[1].value);
-      var fivehr = parseInt(hourGetter[8].attributes[1].value);
-
-      var hourLoop = [ninehr, tenhr, elevenhr, twelvehr, onehr, twohr,threehr, fourhr, fivehr];
-      console.log(hourLoop);
-
     $(document).ready(function() {
-      var now = moment().format("MMMM-D-YYYY hh:mm");
-      $("#currentDay").text(now);
+      var displayDate = moment().format("MMMM-D-YYYY");
+      $("#currentDay").text(displayDate);
+
+      var now = moment();
 
       var m9 = moment({
-        h: 9,
+        h: 09,
         s: 0
         });
       var m10 = moment({
@@ -210,6 +194,9 @@
         h: 17,
         s: 0
         });
+
+        console.log(now);
+        console.log(m4.isAfter(now));
 
         if (m9.isBefore(now)) {
           $("#row-nine").css({"background-color": "#747070"});
