@@ -152,6 +152,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
+
+      var hourGetter = $(".hour");
+      console.log(hourGetter);
+      var ninehr = parseInt(hourGetter[0].attributes[1].value);
+      var tenhr = parseInt(hourGetter[1].attributes[1].value);
+      var elevenhr = parseInt(hourGetter[2].attributes[1].value);
+      var twelvehr = parseInt(hourGetter[3].attributes[1].value);
+      var onehr = parseInt(hourGetter[4].attributes[1].value);
+      var twohr = parseInt(hourGetter[5].attributes[1].value);
+      var threehr = parseInt(hourGetter[6].attributes[1].value);
+      var fourhr = parseInt(hourGetter[7].attributes[1].value);
+      var fivehr = parseInt(hourGetter[8].attributes[1].value);
+
+      var hourLoop = [ninehr, tenhr, elevenhr, twelvehr, onehr, twohr,threehr, fourhr, fivehr];
+      console.log(hourLoop);
+
     $(document).ready(function() {
 
     
@@ -166,17 +182,19 @@
       var hour = moment().hour();
       console.log(hour);
 
-      var hourGetter = $(".hour");
-      console.log(hourGetter);
-      console.log(parseInt(hourGetter[0].attributes[1].value));
-      console.log(parseInt(hourGetter[1].attributes[1].value));
-      console.log(parseInt(hourGetter[2].attributes[1].value));
-      console.log(parseInt(hourGetter[3].attributes[1].value));
-      console.log(parseInt(hourGetter[4].attributes[1].value));
-      console.log(parseInt(hourGetter[5].attributes[1].value));
-      console.log(parseInt(hourGetter[6].attributes[1].value));
-      console.log(parseInt(hourGetter[7].attributes[1].value));
-      console.log(parseInt(hourGetter[8].attributes[1].value));
+      
+
+      for (let i = 0; i < hourLoop.length; i++) {
+        const element = hourLoop[i];
+        console.log(element);
+        if (element === hour) {
+          $(".time-block").animate({ background: "#b6423c", color: "white"});
+        } else if (element < hour) {
+          $(".time-block").animate({ background: "#5d915d", color: "white"});
+        } else if (element > hour) {
+          $(".time-block").animate({ background: "#747070", color: "white"});
+        }
+      }
       
 
 
