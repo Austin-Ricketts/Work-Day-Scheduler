@@ -1,10 +1,17 @@
-# Work-Day-Scheduler
+### Work-Day-Scheduler
 
 ![Image description](Assets/Screen-Shot-1.png)
 ![Image description](Assets/Screen-Shot-2.png)
 ![Image description](Assets/Screen-Shot-3.png)
 ![Image description](Assets/Screen-Shot-4.png)
 ![Image description](Assets/Screen-Shot-5.png)
+
+## Deployed Link
+
+[Work-Day-Scheduler](https://austin-ricketts.github.io/Work-Day-Scheduler/)
+
+
+## Description
 
 This website is meant to function as a daily workday calendar, so it runs from 9am to 5pm. After that: You're on your own!
 
